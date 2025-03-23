@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CredSecure</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffeef0; /* Very light pink */
+            color: #343a40;
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header styling */
+        h1 {
+            font-size: 36px;
+            color: #0056b3; /* Deep blue for a professional tone */
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 28px;
+            color: #0056b3;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        /* General Card Layout */
+        .card {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow for modern feel */
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-sizing: border-box;
+            border: 1px solid #dcdde1; /* Subtle border for definition */
+        }
+        .card p {
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: justify;
+            color: #495057; /* Slightly lighter text color for readability */
+        }
+
+        /* Specific Card Styles */
+        .card1 {
+            background-color: #e3f2fd; /* Very light blue */
+        }
+        .card2 {
+            background-color: #ffffff; /* Pure white */
+        }
+        .card3 {
+            background-color: #fef8e7; /* Soft yellow */
+        }
+
+        /* Section Layout for 3 columns */
+        .section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+            gap: 20px; /* Space between columns */
+        }
+
+        /* Image Styling */
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 100%; /* Ensure the image is responsive */
+            height: auto;
+            border-radius: 10px; /* Optional: Adds rounded corners to the image */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow to match the cards */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .section {
+                grid-template-columns: 1fr; /* Stack into a single column on smaller screens */
+            }
+            .card {
+                width: 100%; /* Cards take full width in a single column */
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                grid-template-columns: 1fr; /* Stack into a single column on small screens */
+            }
+            .card {
+                width: 100%; /* Full width for cards */
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Credit Card Fraud Detection</h1>
+
+        <div class="section">
+            <!-- Card 1: Raising Awareness -->
+            <div class="card card1">
+                <h2>Raising Awareness About Credit Card Fraud</h2>
+                <p>
+                    Credit card fraud is a growing concern in the banking and financial industry, affecting millions globally. As the digital world expands, so do the threats. Fraudsters continuously adapt their tactics, making it essential for both consumers and financial institutions to stay informed and vigilant.
+                </p>
+            </div>
+
+            <!-- Card 2: Machine Learning -->
+            <div class="card card2">
+                <h2>How Machine Learning Helps in Fraud Detection</h2>
+                <p>
+                    Machine learning (ML) is revolutionizing how banks and financial institutions detect and prevent fraud. By analyzing large datasets of historical transactions, ML models identify suspicious patterns, providing faster and more accurate fraud detection than traditional methods.
+                </p>
+            </div>
+
+            <!-- Card 3: Fraud Detection Importance -->
+            <div class="card card3">
+                <h2>Why Fraud Detection is Crucial</h2>
+                <p>
+                    Fraud not only results in financial loss but also damages the reputation of banks and erodes customer trust. Fraud detection is vital to minimize financial risks and maintain trust in the banking system. With the rise of online transactions, real-time fraud detection is more critical than ever.
+                </p>
+            </div>
+        </div>
+
+        <!-- Image Section -->
+        <div class="image-container">
+            <img src="/static/creditcard.jpeg" style="width: 600px; height: 200px;" alt="Credit Card Fraud Detection Visualization">
+
+
+        </div>
+    </div>
+</body>
+</html>

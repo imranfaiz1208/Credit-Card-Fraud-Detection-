@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CredSecure Overview</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style5.css') }}">
+</head>
+<body>
+
+<div class="wrapper flex_align_justify">
+   <div class="tc_wrap">
+       <div class="tabs_list">
+         <ul>
+           <li data-tc="tab_item_1" class="active">Project Overview</li>
+           <li data-tc="tab_item_2">Research and Analysis</li>
+           <li data-tc="tab_item_3">Technology Stack</li>
+           <li data-tc="tab_item_4">User Guidelines</li>
+         </ul>
+       </div>
+       <div class="tabs_content">
+          <div class="tab_head">
+            <h2>Project Overview & Details</h2>
+          </div>
+          <div class="tab_body">
+            <!-- Project Overview Tab -->
+            <div class="tab_item tab_item_1">
+              <h3>Project Overview</h3>
+              <p>The CredSecure project is designed to detect fraudulent credit card transactions using machine learning techniques. The main goal of this system is to identify fraudulent activities in real-time, providing users with immediate feedback on the legitimacy of transactions. This project utilizes a Random Forest model, a robust and efficient algorithm known for its ability to handle imbalanced datasets and perform well in classification tasks such as fraud detection.</p>
+              <p>The system aims to balance high accuracy, precision, recall, and ROC-AUC scores to ensure it can reliably identify fraud while minimizing false positives. The interface, built using Flask and Python, is user-friendly and designed to integrate seamlessly with various transaction systems for real-time processing.</p>
+              <p>This application serves as a practical solution for financial institutions, leveraging machine learning to help prevent financial fraud and reduce operational losses due to fraudulent activities.</p>
+          </div>
+          
+          <!-- Research and Analysis Tab -->
+          <div class="tab_item tab_item_2" style="display: none;">
+              <h3>Research and Analysis</h3>
+              <p>In the CredSecure project, I explored multiple machine learning models to assess their effectiveness in detecting fraudulent credit card transactions. The models tested included Random Forest, XGBoost, Decision Trees, and Logistic Regression. Each model was evaluated using various performance metrics: accuracy, precision, recall, F1 score, and ROC-AUC. These metrics are critical in fraud detection applications, where balancing the detection of fraud (recall) and avoiding false alarms (precision) is essential.</p>
+              <p><strong>Metrics Used:</strong></p>
+              <ul>
+                  <li><strong>Accuracy:</strong> Measures the overall correctness of the model, indicating how well the model classifies both fraudulent and non-fraudulent transactions.</li>
+                  <li><strong>Precision:</strong> Indicates the proportion of true positives (fraudulent transactions detected) among all predicted frauds, minimizing false positives (non-fraudulent transactions incorrectly flagged as fraudulent).</li>
+                  <li><strong>Recall:</strong> Measures the proportion of actual fraudulent transactions correctly identified by the model, minimizing false negatives (fraudulent transactions that are missed).</li>
+                  <li><strong>F1 Score:</strong> The harmonic mean of precision and recall, providing a balanced measure of the model’s ability to detect fraud while minimizing false alarms.</li>
+                  <li><strong>ROC-AUC:</strong> The area under the Receiver Operating Characteristic curve, representing the model’s ability to distinguish between classes. A higher ROC-AUC indicates better model performance in detecting fraudulent transactions across all classification thresholds.</li>
+              </ul>
+              <p>After comparing all models, the Random Forest model was found to perform the best in terms of both accuracy and recall, while also achieving an optimal F1 score and ROC-AUC. The model demonstrated a high ability to correctly classify fraudulent transactions without overfitting, ensuring consistent performance across training and testing datasets.</p>
+              <p>In contrast, XGBoost exhibited excellent accuracy but had a slight drop in recall, leading to some missed fraudulent transactions, especially in test data. Decision Trees, while interpretable, showed signs of overfitting, which resulted in lower generalization ability on unseen data. Logistic Regression had the lowest performance in terms of recall and F1 score, failing to capture complex patterns in the data effectively.</p>
+              <p>The Random Forest model was ultimately selected for integration into the application due to its excellent balance between precision, recall, and ROC-AUC, making it the most reliable and efficient choice for real-time fraud detection.</p>
+          </div>
+          
+
+            <!-- Technology Stack Tab -->
+            <div class="tab_item tab_item_3" style="display: none;">
+                <h3>Technology Stack</h3>
+                <p>CredSecure employs a robust technology stack to ensure efficient and accurate fraud detection that includes:</p>
+                <ul class="technology-list">
+                    <li>Python for backend development</li>
+                    <li>Flask for web framework</li>
+                    <li>Machine Learning Libraries (e.g., scikit-learn, numpy)</li>
+                    <li>Data Preprocessing Techniques (e.g., Undersampling, Oversampling)</li>
+                    <li>Classification Algorithms (e.g., Random Forest, Decision Tree,...)</li>
+                    <li>Data Visualization Tools (e.g., Matplotlib, Seaborn)</li>
+                </ul><br>
+                <p>In conclusion, CredSecure leverages a robust technology stack, including Python, Flask, and machine learning libraries, to deliver a scalable and efficient fraud detection system. Our use of data visualization tools ensures actionable insights, empowering businesses to detect and prevent fraud in real time.</p>
+            </div>
+
+            <!-- User Guidelines Tab -->
+            <div class="tab_item tab_item_4" style="display: none;">
+                <h3>User Guidelines</h3>
+                <p>To ensure a safe and effective experience, users are encouraged to follow these guidelines:</p>
+                <ul class="guidelines-list">
+                    <li>Provide accurate and complete information during registration.</li>
+                    <li>Report any suspicious activity immediately.</li>
+                    <li>Use strong passwords and change them regularly.</li>
+                    <li>Avoid sharing personal or financial information with untrusted sources.</li>
+                    <li>Regularly review transaction history for any unauthorized activities.</li>
+                    <li>Keep your software and devices updated to protect against vulnerabilities.</li>
+                </ul><br>
+                <p>By adhering to these guidelines, users can significantly enhance their security and contribute to a safer environment for everyone. Together, we can protect against fraud and ensure a secure experience with FraudShield Analytics.</p>
+            </div>
+          </div>
+          <div class="tab_foot flex_align_justify">
+            <button class="decline" onclick="window.location.href='{{ url_for('home') }}'">
+              Decline
+            </button>
+            <button class="agree" onclick="window.location.href='{{ url_for('predict') }}'">
+              Agree
+            </button>
+          </div>
+       </div>
+   </div>
+</div>
+
+<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
